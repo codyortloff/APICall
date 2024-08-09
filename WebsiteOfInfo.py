@@ -10,6 +10,8 @@ import pandas as pd
 import streamlit as st
 from bs4 import BeautifulSoup
 
+st.set_page_config(page_title="MOA API Call")
+
 data = requests.get('https://moaapi.net/v2/mall_hours')
 
 json_string = data.text[1:-1]
